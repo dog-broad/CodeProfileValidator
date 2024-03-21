@@ -5,19 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e892fdd-2d36-4581-980b-7d5492357006" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/profile_checker/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/profile_checker/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/profile_checker/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/profile_checker/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/profile_checker/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/profile_checker/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/profile_checker/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/profile_checker/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/CodeProfileValidator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CodeProfileValidator.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodeProfileValidator/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/CodeProfileValidator/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodeProfileValidator/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/CodeProfileValidator/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vercel.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +27,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 4
@@ -105,7 +99,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1711042831130</updated>
-      <workItem from="1711042977446" duration="636000" />
+      <workItem from="1711042977446" duration="710000" />
     </task>
     <servers />
   </component>
