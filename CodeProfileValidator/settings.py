@@ -25,11 +25,7 @@ SECRET_KEY = 'django-insecure-pu)&ry$%aq(5oum$anc@m%y*n2bea47$3egn_ldpr1yyv+6o!m
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [
-    '.vercel.app',
-    'localhost',
-    '127.0.0.1'
-    ]
+ALLOWED_HOSTS = ['*']
 
 DATABASES = {
     # Prevent default database from being created
