@@ -56,11 +56,7 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
 ]
 
-CORS_ORIGIN_ALLOW_ALL = False
-
-CORS_ORIGIN_WHITELIST = [
-    'https://leaderboard-scraper.vercel.app',
-]
+CORS_ORIGIN_ALLOW_ALL = True
 
 ROOT_URLCONF = 'CodeProfileValidator.urls'
 
