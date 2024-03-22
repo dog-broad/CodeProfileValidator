@@ -4,17 +4,19 @@ CodeProfileValidator is a Django web application that allows users to check the 
 
 ## Features
 
-- **Platform Support**: Supports checking profiles on multiple coding platforms including LeetCode, HackerRank, CodeChef, Codeforces, and GeeksforGeeks.
-- **Cross-Origin Requests**: Configured to accept requests from specified origins using CORS (Cross-Origin Resource Sharing).
-- **Simple API**: Provides a simple API endpoint for checking profile existence by passing platform name and username.
+ **Platform Support**: Supports checking profiles on multiple coding platforms including HackerRank, CodeChef, Codeforces, and GeeksforGeeks.
+ **Cross-Origin Requests**: Configured to accept requests from specified origins using CORS (Cross-Origin Resource Sharing).
+ **Simple API**: Provides a simple API endpoint for checking profile existence by passing platform name and username.
 
-## Using the Existing App Hosted on Vercel
+ **NOTE: This project is hosted on Render with limited support to `HackerRank`, `CodeChef`, `Codeforces`, and `GeeksforGeeks`. If you want to use it locally, you will need to set up your own Django application.**
+
+## Using the Existing App Hosted on Render
 
 1. **Access the API:**
 
-   - You can use the existing app hosted on Vercel to access the API and check profile existence on various coding platforms.
+   - You can use the existing app hosted on Render to access the API and check profile existence on various coding platforms.
 
-   - Endpoint: `https://code-profile-validator.vercel.app/check-url-platform/`
+   - Endpoint: `https://codeprofilevalidator.onrender.com/check-url-platform/`
 
    - Parameters:
      - `platform`: Name of the coding platform (e.g., leetcode, hackerrank, codechef).
@@ -26,7 +28,6 @@ CodeProfileValidator is a Django web application that allows users to check the 
 
 2. **Available Platforms:**
 
-   - LeetCode
    - HackerRank
    - CodeChef
    - Codeforces
@@ -34,7 +35,7 @@ CodeProfileValidator is a Django web application that allows users to check the 
   
 **Example:** 
 ```
-https://code-profile-validator.vercel.app/check-url-platform/?platform=leetcode&username=<yourusername>
+https://codeprofilevalidator.onrender.com/check-url-platform/?platform=hackerrank&username=<yourusername>
 ```
 
 ## Setting Up Your Own Django Application
@@ -45,7 +46,14 @@ https://code-profile-validator.vercel.app/check-url-platform/?platform=leetcode&
 
    Click the "Fork" button in the top-right corner of the repository.
 
-2. **Create a Virtual Environment:**
+2. **Clone the Repository:**
+
+   ```bash
+   git clone https://github.com/yourusername/CodeProfileValidator.git
+   cd CodeProfileValidator
+   ```
+
+3. **Create a Virtual Environment:**
    ```bash
    python -m venv venv
    source venv/bin/activate
@@ -53,13 +61,6 @@ https://code-profile-validator.vercel.app/check-url-platform/?platform=leetcode&
    If using Windows, use the following command:
    ```bash
    venv\Scripts\activate
-   ```
-
-3. **Clone the Repository:**
-
-   ```bash
-   git clone https://github.com/yourusername/CodeProfileValidator.git
-   cd CodeProfileValidator
    ```
 
 4. **Install Dependencies:**
@@ -83,7 +84,7 @@ You can use the following endpoint to check the existence of profiles:
 - Endpoint: `http://127.0.0.1:8000/check-url-platform/`
 - Method: GET
 - Parameters:
-  - `platform`: Name of the coding platform (e.g., leetcode, hackerrank, codechef).
+  - `platform`: Name of the coding platform (e.g., hackerrank, codechef).
   - `username`: Username to check.
 
 - Response:
