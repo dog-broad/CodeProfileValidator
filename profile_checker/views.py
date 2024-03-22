@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 # Create your views here.
 # profile_checker/views.py
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponseNotFound
 import requests
 from bs4 import BeautifulSoup
 
@@ -93,4 +93,7 @@ def check_url_platform(request):
     else:
         return JsonResponse({'error': 'Invalid platform'}, status=400)
 
-    return JsonResponse({'exists': exists, 'url': url})
+    if exists:
+        return JsonResponse({'exists': True, 'url': url})
+    else:
+        return HttpResponseNotFound('Profile not found', status=404)
