@@ -9,13 +9,13 @@ from bs4 import BeautifulSoup
 
 def construct_url(platform, username):
     if platform == "hackerrank":
-        return f"https://www.hackerrank.com/profile/{username}"
+        return f"https://www.hackerrank.com/profile/{username}/"
     elif platform == "codechef":
-        return f"https://www.codechef.com/users/{username}"
+        return f"https://www.codechef.com/users/{username}/"
     elif platform == "codeforces":
-        return f"https://codeforces.com/profile/{username}"
+        return f"https://codeforces.com/profile/{username}/"
     elif platform == "geeksforgeeks":
-        return f"https://auth.geeksforgeeks.org/user/{username}"
+        return f"https://auth.geeksforgeeks.org/user/{username}/"
     else:
         return None
 
@@ -27,16 +27,9 @@ def check_geeksforgeeks_exists(url):
     }
     try:
         response = requests.get(url, headers=header)
-        if response.url.startswith("https://auth.geeksforgeeks.org/?to=https://auth.geeksforgeeks.org/profile.php"):
-            return False
-        # verify once more that absolute url is same as requested
-        if response.url != url:
-            # check if only last '/' is missing
-            if response.url.endswith("/") and response.url[:-1] == url:
-                return True
-            return False
-        return True
+        return response.url != "https://auth.geeksforgeeks.org/?to=https://auth.geeksforgeeks.org/profile.php"
     except requests.exceptions.RequestException:
+        print("RequestException")
         return False
 
 
