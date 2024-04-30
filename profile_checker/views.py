@@ -27,6 +27,10 @@ def check_geeksforgeeks_exists(url):
     }
     try:
         response = requests.get(url, headers=header)
+        print(response.url)
+        print(response.status_code)
+        if response.status_code == 404:
+            return False
         return response.url != "https://auth.geeksforgeeks.org/?to=https://auth.geeksforgeeks.org/profile.php"
     except requests.exceptions.RequestException:
         print("RequestException")
