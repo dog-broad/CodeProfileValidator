@@ -21,4 +21,5 @@ from django.urls import include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('profile_checker.urls')),
+    path('', include('rating_checker.urls')),
 ]

@@ -4,9 +4,9 @@ CodeProfileValidator is a Django web application that allows users to check the 
 
 ## Features
 
- **Platform Support**: Supports checking profiles on multiple coding platforms including HackerRank, CodeChef, Codeforces, and GeeksforGeeks.
- **Cross-Origin Requests**: Configured to accept requests from specified origins using CORS (Cross-Origin Resource Sharing).
- **Simple API**: Provides a simple API endpoint for checking profile existence by passing platform name and username.
+ **Platform Support**: Supports checking profiles on multiple coding platforms including HackerRank, CodeChef, Codeforces, and GeeksforGeeks.  
+ **Cross-Origin Requests**: Configured to accept requests from specified origins using CORS (Cross-Origin Resource Sharing).  
+ **Simple API**: Provides a simple API endpoint for checking profile existence by passing platform name and username.  
 
  **NOTE: This project is hosted on Render with limited support to `HackerRank`, `CodeChef`, `Codeforces`, and `GeeksforGeeks`. If you want to use it locally, you will need to set up your own Django application.**
 
@@ -25,6 +25,11 @@ CodeProfileValidator is a Django web application that allows users to check the 
    - Response:
      - `exists`: Boolean value indicating whether the profile exists.
      - `url`: URL of the profile.
+
+   - **New Endpoints:**  
+     - `user/<str:user_id>/`: Returns detailed information about the specified user, including their platform data.
+     - `update_scores/<str:user_id>/`: Updates the scores of the specified user from various coding platforms.
+     - `fetch_platform_score/<str:platform>/<str:user_id>/`: Returns the score of the specified platform for the specified user.
 
 2. **Available Platforms:**
 
@@ -77,19 +82,48 @@ https://codeprofilevalidator.onrender.com/check-url-platform/?platform=hackerran
 
    The development server will start running at `http://127.0.0.1:8000/`.
 
-### API Endpoint
+### API Endpoints
 
-You can use the following endpoint to check the existence of profiles:
+#### Check Profile Existence
 
-- Endpoint: `http://127.0.0.1:8000/check-url-platform/`
-- Method: GET
-- Parameters:
+- **Endpoint:** `http://127.0.0.1:8000/check-url-platform/`
+- **Method:** GET
+- **Parameters:**
   - `platform`: Name of the coding platform (e.g., hackerrank, codechef).
   - `username`: Username to check.
-
-- Response:
+- **Response:**
   - `exists`: Boolean value indicating whether the profile exists.
   - `url`: URL of the profile.
+
+#### Fetch User Details
+
+- **Endpoint:** `http://127.0.0.1:8000/user/<str:user_id>/`
+- **Method:** GET
+- **Parameters:**
+  - `user_id`: ID of the user. (The project directly interacts with the `users` table in the database.)
+- **Response:**
+  - `username`: Username of the user for which the data is being fetched.
+  - `platform_name`: Name of the coding platform.
+
+#### Update Scores
+
+- **Endpoint:** `http://127.0.0.1:8000/update_scores/<str:user_id>/`
+- **Method:** POST
+- **Parameters:**
+  - `user_id`: ID of the user. (The project directly interacts with the `users` table in the database.)
+- **Response:**
+  - `success`: Boolean value indicating whether the update was successful.
+  - `error`: Error message if the update was not successful.
+
+#### Fetch Platform Score
+
+- **Endpoint:** `http://127.0.0.1:8000/fetch_platform_score/<str:platform>/<str:user_id>/`
+- **Method:** GET
+- **Parameters:**
+  - `platform`: Name of the coding platform (e.g., hackerrank, codechef).
+  - `user_id`: ID of the user. (The project directly interacts with the `users` table in the database.)
+- **Response:**
+  - `score`: Score of the specified platform for the specified user.
 
 ## Contributing
 

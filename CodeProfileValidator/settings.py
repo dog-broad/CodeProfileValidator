@@ -9,8 +9,13 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
-
+import os
 from pathlib import Path
+import dj_database_url
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -27,11 +32,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
-DATABASES = {
-    # Prevent default database from being created
-}
-
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     "profile_checker.apps.ProfileCheckerConfig",
-    'corsheaders'
+    'corsheaders',
+    "rating_checker.apps.RatingCheckerConfig"
 ]
 
 MIDDLEWARE = [
@@ -79,7 +80,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'CodeProfileValidator.wsgi.application'
 
 
-# Database
+# Database - DEFAULT
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 # DATABASES = {
@@ -89,6 +90,16 @@ WSGI_APPLICATION = 'CodeProfileValidator.wsgi.application'
 #     }
 # }
 
+
+# My Supabase Postgres Database
+password = os.getenv('DB_PASSWORD')
+# Parse the database URL
+DATABASES = {
+    'default': dj_database_url.config(
+        default='postgres://postgres.msyamhipiqrodsygmeyd:' + password + '@aws-0-ap-south-1.pooler.supabase.com:5432'
+                                                                         '/postgres'
+    )
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators

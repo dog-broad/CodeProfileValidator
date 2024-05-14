@@ -4,8 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e892fdd-2d36-4581-980b-7d5492357006" name="Changes" comment="requirements fix">
+    <list default="true" id="0e892fdd-2d36-4581-980b-7d5492357006" name="Changes" comment="Fixes and Feature Additions&#10;&#10;- Updated `.idea/workspace.xml` to reflect changes in file paths and configurations related to the recent refactor and updates.&#10;- Updated `settings.py` in `CodeProfileValidator` to include environment variable loading from `.env` file, ensuring secure handling of sensitive data like database passwords.&#10;- Added new URLs for `rating_checker` app in `urls.py` of `CodeProfileValidator`.&#10;- Updated `models.py` in `rating_checker` app to include auto-generated Django models for database tables.&#10;- Added new views and functions in `views.py` of `rating_checker` to handle user details, score updates, and fetching platform scores.&#10;- Updated `requirements.txt` with new dependencies or updated versions.">
+      <change afterPath="$PROJECT_DIR$/CodeProfileValidator/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rating_checker/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rating_checker/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rating_checker/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rating_checker/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rating_checker/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rating_checker/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rating_checker/scrap.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rating_checker/scraper.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rating_checker/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rating_checker/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rating_checker/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeProfileValidator/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/CodeProfileValidator/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeProfileValidator/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/CodeProfileValidator/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,13 +41,26 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;dog-broad&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/dog-broad/CodeProfileValidator.git&quot;,
+    &quot;accountId&quot;: &quot;cb6466cc-253f-4893-8383-a902041b9836&quot;
+  }
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2e0YBxJaC85i0NdGS8FHNyFLvnt" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -39,23 +69,48 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Django Server.CodeProfileValidator.executor&quot;: &quot;Run&quot;,
+    &quot;Python.manage.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager">
+}</component>
+  <component name="RunManager" selected="Django Server.CodeProfileValidator">
+    <configuration name="manage" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="CodeProfileValidator" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/manage.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="CodeProfileValidator" type="Python.DjangoServer" factoryName="Django server">
       <module name="CodeProfileValidator" />
       <option name="ENV_FILES" value="" />
@@ -63,6 +118,7 @@
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="CodeProfileValidator.settings" />
       </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
@@ -80,11 +136,17 @@
       <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.manage" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-5a2391486177-2887949eec09-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.13763.11" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-PY-241.14494.241" />
+        <option value="bundled-python-sdk-0509580d9d50-28c9f5db9ffe-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.14494.241" />
       </set>
     </attachedChunks>
   </component>
@@ -97,6 +159,8 @@
       <option name="presentableId" value="Default" />
       <updated>1711042831130</updated>
       <workItem from="1711042977446" duration="3793000" />
+      <workItem from="1715594059191" duration="10289000" />
+      <workItem from="1715654826835" duration="11590000" />
     </task>
     <task id="LOCAL-00001" summary="requirements">
       <option name="closed" value="true" />
@@ -136,5 +200,8 @@
     <MESSAGE value="requirements" />
     <MESSAGE value="requirements fix" />
     <option name="LAST_COMMIT_MESSAGE" value="requirements fix" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/CodeProfileValidator$manage.coverage" NAME="manage Coverage Results" MODIFIED="1715626261157" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
