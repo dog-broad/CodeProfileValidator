@@ -1,0 +1,10 @@
+GET http://localhost:8000/user/5daba3a1-a731-414c-a743-6fed9cf8f890
+User-Agent: IntelliJ HTTP Client/PyCharm 2024.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-05-11T175837.404.html
+
+###
+
