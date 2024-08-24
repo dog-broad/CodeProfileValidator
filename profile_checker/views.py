@@ -13,7 +13,7 @@ def construct_url(platform, username):
     elif platform == "codechef":
         return f"https://www.codechef.com/users/{username}/"
     elif platform == "codeforces":
-        return f"https://codeforces.com/profile/{username}/"
+        return f"https://codeforces.com/api/user.info?handles={username}/"
     elif platform == "geeksforgeeks":
         return f"https://auth.geeksforgeeks.org/user/{username}/"
     else:
@@ -40,7 +40,9 @@ def check_geeksforgeeks_exists(url):
 def check_codeforces_exists(url):
     try:
         response = requests.get(url)
-        return response.url != "https://codeforces.com/"
+        # read response as json
+        data = response.json()
+        return data["status"] == "OK"
     except requests.exceptions.RequestException:
         return False
 
