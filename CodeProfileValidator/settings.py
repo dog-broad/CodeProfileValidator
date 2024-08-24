@@ -30,7 +30,7 @@ SECRET_KEY = 'django-insecure-pu)&ry$%aq(5oum$anc@m%y*n2bea47$3egn_ldpr1yyv+6o!m
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['.vercel.app', '*']
 
 # Application definition
 
@@ -95,11 +95,16 @@ WSGI_APPLICATION = 'CodeProfileValidator.wsgi.application'
 password = os.getenv('DB_PASSWORD')
 # Parse the database URL
 DATABASES = {
-    'default': dj_database_url.config(
-        default='postgres://postgres.msyamhipiqrodsygmeyd:' + password + '@aws-0-ap-south-1.pooler.supabase.com:5432'
-                                                                         '/postgres'
-    )
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',
+        'USER': 'postgres.ggpgjxdhvhgqcjhetutm',
+        'PASSWORD': password,
+        'HOST': 'aws-0-us-east-1.pooler.supabase.com',
+        'PORT': '5432',
+    }
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
