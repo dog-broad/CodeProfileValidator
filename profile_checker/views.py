@@ -67,10 +67,7 @@ def check_hackerrank_exists(url):
         return False
 
 
-def check_url_platform(request):
-    platform = request.GET.get('platform', '')
-    username = request.GET.get('username', '')
-
+def check_url_platform(request, platform, username):
     if not platform or not username:
         return JsonResponse({'error': 'Platform or username not provided'}, status=400)
 
